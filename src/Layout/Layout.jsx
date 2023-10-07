@@ -3,11 +3,14 @@ import Navber from "../Navber/Navber";
 
 
 
+
+
 const Layout = () => {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto poppins">
 
             <Navber></Navber>
+
             <Outlet></Outlet>
         </div>
     );

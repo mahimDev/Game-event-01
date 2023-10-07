@@ -4,6 +4,8 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import Blog from "../Blog/Blog";
 import Error from "../Error/Error";
+import Login from "../Log/Login";
+import Register from "../Res/Register";
 
 
 const router = createBrowserRouter([
@@ -14,15 +16,24 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('/Game.json')
             },
             {
-                path: "/abou",
+                path: "/about",
                 element: <About></About>
             },
             {
-                path: "/blog",
+                path: "/blo",
                 element: <Blog></Blog>
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/register",
+                element: <Register></Register>
             }
         ],
     },

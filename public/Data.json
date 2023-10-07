@@ -1,0 +1,50 @@
+[
+  {
+    "name": "AI Innovation Summit",
+    "date": "2023-11-15",
+    "location": "San Francisco, CA",
+    "image": "https://example.com/ai-innovation-summit.jpg",
+    "price": 299.99,
+    "description": "Explore the future of artificial intelligence at the AI Innovation Summit. Discover groundbreaking AI technologies, attend hands-on workshops, and connect with leading AI experts."
+  },
+  {
+    "name": "Digital Marketing Expo",
+    "date": "2023-10-20",
+    "location": "New York, NY",
+    "image": "https://example.com/digital-marketing-expo.jpg",
+    "price": 199.99,
+    "description": "Join the Digital Marketing Expo to master the latest digital marketing strategies. Learn from top industry professionals, boost your online presence, and drive business growth."
+  },
+  {
+    "name": "Entrepreneurship Conference",
+    "date": "2023-09-25",
+    "location": "Los Angeles, CA",
+    "image": "https://example.com/entrepreneurship-conference.jpg",
+    "price": 149.99,
+    "description": "Ignite your entrepreneurial spirit at the Entrepreneurship Conference. Gain insights from successful entrepreneurs, pitch your startup ideas, and network with like-minded individuals."
+  },
+  {
+    "name": "Healthcare Innovation Symposium",
+    "date": "2023-12-05",
+    "location": "Chicago, IL",
+    "image": "https://example.com/healthcare-innovation-symposium.jpg",
+    "price": 249.99,
+    "description": "Stay at the forefront of healthcare at the Healthcare Innovation Symposium. Explore cutting-edge medical technologies, connect with healthcare leaders, and drive healthcare innovation."
+  },
+  {
+    "name": "Data Science Summit",
+    "date": "2023-08-10",
+    "location": "Boston, MA",
+    "image": "https://example.com/data-science-summit.jpg",
+    "price": 199.99,
+    "description": "Dive deep into data science at the Data Science Summit. Attend hands-on workshops, analyze real-world datasets, and learn from top data scientists and analysts."
+  },
+  {
+    "name": "Environmental Sustainability Forum",
+    "date": "2023-07-01",
+    "location": "Seattle, WA",
+    "image": "https://example.com/environmental-sustainability-forum.jpg",
+    "price": 149.99,
+    "description": "Join the Environmental Sustainability Forum to discuss the latest eco-friendly innovations and strategies. Collaborate with environmental experts and take steps towards a greener future."
+  }
+]
