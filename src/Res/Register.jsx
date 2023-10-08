@@ -2,13 +2,14 @@ import { useContext } from "react";
 import { AuthContext } from "../Auth/AuthProveider";
 import { Link } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
+import Swal from "sweetalert2";
 
 
 
 
 const Register = () => {
 
-    const { createUser, googleLogin } = useContext(AuthContext)
+    const { createUser, googleLogin, userName } = useContext(AuthContext)
 
 
     const handleRegister = e => {
@@ -18,12 +19,20 @@ const Register = () => {
         const email = form.get('email')
         const password = form.get('password')
         createUser(email, password)
-            .then(res => {
-                console.log(res.user)
+            .then(() => {
+                userName({
+                    displayName: name
+                })
+
+                Swal.fire(
+                    'Good job!',
+                    'Register successful',
+                    'success'
+                )
             })
-            .catch(err => console.log(err))
+            .catch(() => {
 
-
+            })
         console.log(name, email, password);
     }
 
@@ -74,8 +83,8 @@ const Register = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Register</button>
-                            <button onClick={() => googleLogin()} className=" mt-2 btn btn-primary"><FcGoogle></FcGoogle>  Login With Google</button>
+                            <button className="btn btn-primary  text-white bg-gradient-to-r from-[#000000] to-[#434343]">Register</button>
+                            <button onClick={() => googleLogin()} className=" mt-2 btn btn-primary  text-white bg-gradient-to-r from-[#000000] to-[#434343]"><FcGoogle></FcGoogle>   Google</button>
                             <p className="text-base font-poppins ">Already you have an account <Link to="/login" className="text-lg font-semibold text-blue-600">Please Login</Link></p>
                         </div>
                     </form>

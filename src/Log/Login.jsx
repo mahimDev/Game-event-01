@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Auth/AuthProveider";
 import { FcGoogle } from 'react-icons/fc';
+import Swal from "sweetalert2";
 const Login = () => {
     const { signIn, googleLogin } = useContext(AuthContext)
 
@@ -10,8 +11,20 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         signIn(email, password)
-            .then(res => console.log(res.user))
-            .catch(err => console.log(err.massage))
+            .then(() => {
+                Swal.fire(
+                    'Good job!',
+                    'Login successful',
+                    'success'
+                )
+            })
+            .catch(() => {
+                Swal.fire(
+                    'bad job',
+                    'Please try again',
+                    'error'
+                )
+            })
         // console.log(email, password);
     }
 
@@ -49,9 +62,9 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
-                            <button onClick={() => googleLogin()} className=" mt-2 btn btn-primary"><FcGoogle></FcGoogle>  Login With Google</button>
-                            <p className="text-base font-poppins ">Do not have an account <Link to="/register" className="text-lg font-semibold text-blue-600">Register</Link></p>
+                            <button className="btn btn-primary text-white bg-gradient-to-r from-[#000000] to-[#434343]">Login</button>
+                            <button onClick={() => googleLogin()} className=" mt-2 btn btn-primary text-white bg-gradient-to-r from-[#000000] to-[#434343]"><FcGoogle></FcGoogle>  Login With Google</button>
+                            <p className="text-base font-poppins ">Do not have an account <Link to="/register" className="text-lg font-semibold text-gradient-to-r from-[#000000] to-[#434343]">Register</Link></p>
                         </div>
                     </form>
 

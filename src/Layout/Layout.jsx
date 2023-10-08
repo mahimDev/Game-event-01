@@ -7,7 +7,7 @@ import Navber from "../Navber/Navber";
 
 const Layout = () => {
     return (
-        <div className="container mx-auto poppins">
+        <div className="container mx-auto font-poppins">
 
             <Navber></Navber>
 

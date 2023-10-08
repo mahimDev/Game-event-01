@@ -6,6 +6,8 @@ import Blog from "../Blog/Blog";
 import Error from "../Error/Error";
 import Login from "../Log/Login";
 import Register from "../Res/Register";
+import PrivateRoute from "../Components/Private/PrivateRoute";
+import Details from "../Components/Details/Details";
 
 
 const router = createBrowserRouter([
@@ -34,6 +36,11 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>
+            },
+            {
+                path: "/details/:id",
+                element: <Details></Details>,
+                loader: () => fetch('/Game.json')
             }
         ],
     },
