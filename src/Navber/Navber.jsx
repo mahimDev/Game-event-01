@@ -67,7 +67,7 @@ const Navber = () => {
 
         <div className='text-white flex justify-between py-4 px-10 bg-gradient-to-r from-[#000000] to-[#434343] shadow-md items-center '>
             <div className="hidden md:block">
-                <img className='w-10' src={img} alt="" />
+                <img className='w-16 ' src="https://i.ibb.co/2h4Nvj6/Logo1.png" alt="" />
             </div>
             <div className="md:hidden block">
 
@@ -81,9 +81,9 @@ const Navber = () => {
                 <p className='hidden md:block'>{user?.displayName}</p>
                 <img className='w-10 rounded-full border border-black ' src={img} alt="" />
                 {
-                    user ? <button onClick={handleLogOut} className="btn glass  font-bold">Sign in</button>
+                    user ? <button onClick={handleLogOut} className="btn glass  font-bold">Sign Out</button>
                         :
-                        <button className="btn glass  font-bold">Sign Out</button>
+                        <button className="btn glass  font-bold">Sign in</button>
                 }
 
             </div>

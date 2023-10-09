@@ -14,7 +14,7 @@ const Banner = () => {
     };
     return (
 
-        <div className="container mx-auto overflow-hidden">
+        <div className="h-[95vh] mx-auto overflow-hidden">
 
             <Slider {...settings}>
                 <div>
