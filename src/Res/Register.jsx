@@ -18,6 +18,10 @@ const Register = () => {
         const name = form.get('name')
         const email = form.get('email')
         const password = form.get('password')
+        /*     if (!/^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{6}$/.test(password)) {
+                alert('Please enter')ss
+                return 
+            } */
         createUser(email, password)
             .then(() => {
                 userName({
@@ -31,7 +35,11 @@ const Register = () => {
                 )
             })
             .catch(() => {
-
+                Swal.fire(
+                    'sorry!',
+                    'please chack your email and password',
+                    'error'
+                )
             })
         console.log(name, email, password);
     }

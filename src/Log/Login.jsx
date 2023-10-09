@@ -1,11 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Auth/AuthProveider";
 import { FcGoogle } from 'react-icons/fc';
 import Swal from "sweetalert2";
 const Login = () => {
+    const location = useLocation()
+    console.log(location)
     const { signIn, googleLogin } = useContext(AuthContext)
-
+    const naviget = useNavigate()
     const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -17,6 +19,11 @@ const Login = () => {
                     'Login successful',
                     'success'
                 )
+                if (location.state) {
+                    naviget(location.state)
+                    return;
+                }
+                naviget('/')
             })
             .catch(() => {
                 Swal.fire(

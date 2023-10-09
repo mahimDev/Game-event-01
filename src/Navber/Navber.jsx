@@ -16,7 +16,9 @@ const Navber = () => {
                     'success'
                 )
             })
-            .catch()
+            .catch(err => {
+                console.log(err)
+            })
     }
 
 
@@ -66,13 +68,13 @@ const Navber = () => {
     return (
 
         <div className='text-white flex justify-between py-4 px-10 bg-gradient-to-r from-[#000000] to-[#434343] shadow-md items-center '>
-            <div className="hidden md:block">
+            <div className="">
                 <img className='w-16 ' src="https://i.ibb.co/2h4Nvj6/Logo1.png" alt="" />
             </div>
             <div className="md:hidden block">
 
             </div>
-            <div >
+            <div className="hidden md:block" >
                 <ul className='flex gap-4 text-lg font-normal'>
                     {navBer}
                 </ul>
@@ -81,9 +83,9 @@ const Navber = () => {
                 <p className='hidden md:block'>{user?.displayName}</p>
                 <img className='w-10 rounded-full border border-black ' src={img} alt="" />
                 {
-                    user ? <button onClick={handleLogOut} className="btn glass  font-bold">Sign Out</button>
+                    user ? <button onClick={handleLogOut} className="btn btn-sm glass lg:btn-md font-bold">Sign Out</button>
                         :
-                        <button className="btn glass  font-bold">Sign in</button>
+                        <button className="btn btn-sm lg:btn-md glass  font-bold">Sign in</button>
                 }
 
             </div>

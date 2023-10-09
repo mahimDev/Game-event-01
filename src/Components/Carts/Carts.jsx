@@ -12,7 +12,7 @@ const Carts = ({ load }) => {
 
 
             </div>
-            <div className="grid md:grid-cols-3 mb-20 gap-5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 mb-20 gap-5">
                 {
                     load.map(data => <Cart key={data.id} data={data}></Cart>)
                 }
