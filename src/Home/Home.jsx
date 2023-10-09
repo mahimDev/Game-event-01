@@ -4,8 +4,11 @@ import Footer from "../Footer/Footer";
 import Banner from "../Banner/Banner";
 import ScrollingName from "../Components/Scrolling/ScrollingName";
 import Hero from "../Components/Hero/Hero";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+    AOS.init();
     const load = useLoaderData()
 
     return (

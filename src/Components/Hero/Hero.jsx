@@ -2,7 +2,7 @@
 
 const Hero = () => {
     return (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 mx-auto my-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 mx-auto my-10 ">
 
             <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 bg-gradient-to-r from-[#000000] to-[#434343] dark:border-gray-700">
                 <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan</h5>

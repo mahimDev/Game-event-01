@@ -7,7 +7,8 @@ const Cart = ({ data }) => {
     return (
 
 
-        <div className="card   shadow-xl image-full">
+        <div data-aos="flip-left" className="card   shadow-xl image-full">
+
             <figure><img src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-3xl ">{name}</h2>
