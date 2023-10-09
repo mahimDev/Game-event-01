@@ -68,17 +68,31 @@ const Navber = () => {
     return (
 
         <div className='text-white flex justify-between py-4 px-10 bg-gradient-to-r from-[#000000] to-[#434343] shadow-md items-center '>
-            <div className="">
-                <img className='w-16 ' src="https://i.ibb.co/2h4Nvj6/Logo1.png" alt="" />
+            <div className=" hidden md:block">
+                <img className='w-16  ' src="https://i.ibb.co/2h4Nvj6/Logo1.png" alt="" />
             </div>
             <div className="md:hidden block">
-
+                <div className="drawer">
+                    <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+                    <div className="drawer-content">
+                        {/* Page content here */}
+                        <label htmlFor="my-drawer" className="btn btn-primary  glass drawer-button text-white">VR Console</label>
+                    </div>
+                    <div className="drawer-side">
+                        <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+                        <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+                            {/* Sidebar content here */}
+                            {navBer}
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div className="hidden md:block" >
                 <ul className='flex gap-4 text-lg font-normal'>
                     {navBer}
                 </ul>
             </div>
+
             <div className='flex items-center gap-5'>
                 <p className='hidden md:block'>{user?.displayName}</p>
                 <img className='w-10 rounded-full border border-black ' src={img} alt="" />
